@@ -6,7 +6,7 @@ import time
 #네이버 증권 당일 거래 TOP 주식들 크롤링
 
 def Stock_crawling(result):
-    wd = webdriver.Chrome('/Users/jnhyn/Documents/Jun/4학년1학기/빅데이터/chromedriver')
+    wd = webdriver.Chrome('chromedriver 디렉토리 위치')
     time.sleep(3)
     
     url = "https://finance.naver.com/"
@@ -60,6 +60,6 @@ def main():
     Stock_crawling(result)
     print(result)
     CB_tbl = pd.DataFrame(result,columns =('name','price','updown','updown(%)')) 
-    CB_tbl.to_csv('./3-최준현-201835753.csv', encoding = 'cp949', mode = 'w',index = True)
+    CB_tbl.to_csv('./Stock_crawling.csv', encoding = 'cp949', mode = 'w',index = True)
 
 main()
