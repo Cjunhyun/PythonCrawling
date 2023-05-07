@@ -4,11 +4,10 @@ import pandas as pd
 from selenium import webdriver
 import time
 
-wd = webdriver.Chrome('/Users/jnhyn/Documents/Jun/4학년1학기/빅데이터/chromedriver')
 
 #베스트 국내도서 중 여행 카테고리에서 크롤링
 def Book_crawling(result,check):
-    wd = webdriver.Chrome('/Users/jnhyn/Documents/Jun/4학년1학기/빅데이터/chromedriver')
+    wd = webdriver.Chrome('chromedriver 디렉터리 위치')
 
     for i in ["1","2","3","4"]:
         url = "https://product.kyobobook.co.kr/bestseller/online?period=001#?page="+i+"&per=50&ymw=&period=001&saleCmdtClstCode=32&dsplDvsnCode=001&dsplTrgtDvsnCode=004&saleCmdtDsplDvsnCode="
